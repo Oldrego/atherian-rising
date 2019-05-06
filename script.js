@@ -1,12 +1,14 @@
 var curday;
 var secTime;
 var ticker;
- 
+
+
 function getSeconds() {
  var nowDate = new Date();
  var dy = 6 ; //Sunday through Saturday, 0 to 6
  var countertime = new Date(nowDate.getFullYear(),nowDate.getMonth(),nowDate.getDate(),20,0,0); //20 out of 24 hours = 8pm
  
+ var counto = 
  var curtime = nowDate.getTime(); //current time
  var atime = countertime.getTime(); //countdown time
  var diff = parseInt((atime - curtime)/1000);
@@ -18,8 +20,9 @@ function getSeconds() {
 }
  
 while(curday == 0) {
-  if(date.gethours() == 9) {
-  reset timer;
+  if(date.gethours() == 9 && date.getseconds() == 0) {
+ 
+    reset timer;
   }
 }
 function startTimer(secs) {
