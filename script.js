@@ -87,6 +87,8 @@ var dates = [
 "December 27 2020 21:00:00 CST-0500",
 ];
 
+var dateAmount = 
+
 function getTimeRemaining(endtime) {
   var t = Date.parse(endtime) - Date.parse(new Date());
   var seconds = Math.floor((t / 1000) % 60);
@@ -129,10 +131,12 @@ function initializeClock(id, endtime) {
 }
 
 function selectDate() {
-while (t <= 0) {
-}
+while (t.total <= 0) {
+
+  }
 }
 
+var deadline = "May 12 2019 21:00:00 CST-0500"
 initializeClock('clockdiv', deadline);
 
 //"May 12 2019 21:00:00 CST-0500"
