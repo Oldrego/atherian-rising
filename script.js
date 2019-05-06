@@ -1,4 +1,3 @@
-<script>
 var curday;
 var secTime;
 var ticker;
@@ -47,4 +46,3 @@ function tick() {
  document.getElementById("minutes").innerHTML = ( (mins < 10) ? "0" : "" ) + mins;
  document.getElementById("seconds").innerHTML = ( (secs < 10) ? "0" : "" ) + secs;
 }
-</script>
