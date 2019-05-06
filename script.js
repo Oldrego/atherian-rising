@@ -128,7 +128,11 @@ function initializeClock(id, endtime) {
   var timeinterval = setInterval(updateClock, 1000);
 }
 
-var deadline = "5/12/19 21:00:00 CST-0500";
+function selectDate() {
+while (t <= 0) {
+}
+}
+
 initializeClock('clockdiv', deadline);
 
-//"May 12 2019 21:00:00"
+//"May 12 2019 21:00:00 CST-0500"
