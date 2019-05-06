@@ -120,22 +120,22 @@ function initializeClock(id, endtime) {
     secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
 
     if (t.total <= 0) {
-      clearInterval(timeinterval);
-      while (t.total <= 0) {
     for (var i = 0; i < datesAmount; i++) {
-        console.log(datesAmount[i]);
+        clearInterval(timeinterval);
+        var dateRecovered = (dates[i]);
+        var deadline = Date.parse(new Date(dateRecovered));
+      initializeClock('clockdiv', deadline);
         
     }
   }
 }
-    }
-  }
 
   updateClock();
   var timeinterval = setInterval(updateClock, 1000);
+
 }
 
-var deadline = "May 12 2019 21:00:00 CST-0500"
+var deadline = "May 6 2019 18:40:00 CST-0500"
 initializeClock('clockdiv', deadline);
 
 //"May 12 2019 21:00:00 CST-0500"
