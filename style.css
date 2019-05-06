@@ -12,53 +12,44 @@ h1 {
   text-align:center
 }
 
-#countholder .link{
-  margin-top: 40px;
+body{
+    text-align: center;
+    background: #000000;
+  font-family: sans-serif;
+  font-weight: 100;
 }
- 
-#countholder a{
-  display: inline-block;
-  color: #fff;
-  font-size: 20px;
-  padding: 20px;
-  background: #265;
-  border-radius: 10px;
-  text-decoration: none;
+
+h1{
+  color: #6F6F6F;
+  font-weight: 100;
+  font-size: 40px;
+  margin: 40px 0px 20px;
 }
- 
-#countholder a:hover{
-  background: #487;
+
+#clockdiv{
+    font-family: sans-serif;
+    color: #fff;
+    display: inline-block;
+    font-weight: 100;
+    text-align: center;
+    font-size: 30px;
 }
- 
-#countholder{
- font-family: sans-serif;
- color: #fff;
- display: inline-block;
- font-weight: 100;
- text-align: center;
- font-size: 48px;
- background-color: #333;
- padding:20px;
- border-radius: 6px;
- margin-bottom:30px;
- line-height: 1.4;
+
+#clockdiv > div{
+    padding: 10px;
+    border-radius: 3px;
+    background: #6F6F6F;
+    display: inline-block;
 }
- 
- 
-#countholder > div{
- padding: 4px 10px;
- border-radius: 3px;
- background: #6F6F6F;
- display: inline-block;
+
+#clockdiv div > span{
+    padding: 15px;
+    border-radius: 3px;
+    background: #000000;
+    display: inline-block;
 }
- 
-#countholder div > span{
- border-radius: 3px;
- background: #6F6F6F;
- display: inline-block;
-}
- 
-#countholder .smalltext{
- padding-top: 5px;
- font-size: 16px;
+
+.smalltext{
+    padding-top: 5px;
+    font-size: 16px;
 }

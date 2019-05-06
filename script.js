@@ -28,8 +28,8 @@ function initializeClock(id, endtime) {
     minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
     secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
 
-    if (t.total <= 0) {
-      clearInterval(timeinterval);
+    if (t.total = 0) {
+      var deadline = new Date(Date.parse(new Date()) + 7 * 24 * 60 * 60 * 1000)
     }
   }
 
@@ -37,5 +37,5 @@ function initializeClock(id, endtime) {
   var timeinterval = setInterval(updateClock, 1000);
 }
 
-var deadline = new Date(Date.parse(new Date()) + 15 * 24 * 60 * 60 * 1000);
+var deadline = new Date(Date.parse(new Date()) + 0.001 * 24 * 60 * 60 * 1000);
 initializeClock('clockdiv', deadline);
