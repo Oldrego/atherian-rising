@@ -30,7 +30,7 @@ function initializeClock(id, endtime) {
 
     if (t.total <= 0) {
       clearInterval(timeinterval);
-      var deadline = new Date(Date.parse(new Date()) + 7 * 24 * 60 * 60 * 1000);
+      var deadline = ;
       initializeClock('clockdiv', deadline);
     }
   }
@@ -39,7 +39,7 @@ function initializeClock(id, endtime) {
   var timeinterval = setInterval(updateClock, 1000);
 }
 
-var deadline = "May 12 2019 21:00:00 CST-0500";
+var deadline = "5/12/19 21:00:00 CST-0500";
 initializeClock('clockdiv', deadline);
 
 //"May 12 2019 21:00:00"
