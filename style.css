@@ -48,13 +48,13 @@ h1 {
 #countholder > div{
  padding: 4px 10px;
  border-radius: 3px;
- background: #cc3300;
+ background: #6F6F6F;
  display: inline-block;
 }
  
 #countholder div > span{
  border-radius: 3px;
- background: #cc3300;
+ background: #6F6F6F;
  display: inline-block;
 }
  
