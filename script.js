@@ -29,7 +29,9 @@ function initializeClock(id, endtime) {
     secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
 
     if (t.total <= 0) {
-      var deadline = deadline + 7 * 24 * 60 * 60 * 1000;
+      clearInterval(timeinterval);
+      var deadline = new Date(Date.parse(new Date()) + 7 * 24 * 60 * 60 * 1000);
+      initializeClock('clockdiv', deadline);
     }
   }
 
