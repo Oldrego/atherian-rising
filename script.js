@@ -32,9 +32,60 @@ var dates = [
 "12/8/19 21:00:00 CST-0500",
 "12/15/19 21:00:00 CST-0500",
 "12/22/19 21:00:00 CST-0500",
-"12/29/19 21:00:00 CST-0500"
+"12/29/19 21:00:00 CST-0500",
+"1/5/2020 21:00:00 CST-0500",
+"1/12/2020 21:00:00 CST-0500",
+"1/19/2020 21:00:00 CST-0500",
+"1/26/2020 21:00:00 CST-0500",
+"February 2 2020 21:00:00 CST-0500",
+"February 9 2020 21:00:00 CST-0500",
+"February 16 2020 21:00:00 CST-0500",
+"February 23 2020 21:00:00 CST-0500",
+"March 1 2020 21:00:00 CST-0500",
+"March 8 2020 21:00:00 CST-0500",
+"March 15 2020 21:00:00 CST-0500",
+"March 22 2020 21:00:00 CST-0500",
+"March 29 2020 21:00:00 CST-0500",
+"April 5 2020 21:00:00 CST-0500",
+"April 12 2020 21:00:00 CST-0500",
+"April 19 2020 21:00:00 CST-0500",
+"April 26 2020 21:00:00 CST-0500",
+"May 3 2020 21:00:00 CST-0500",
+"May 10 2020 21:00:00 CST-0500",
+"May 17 2020 21:00:00 CST-0500",
+"May 24 2020 21:00:00 CST-0500",
+"May 31 2020 21:00:00 CST-0500",
+"June 7 2020 21:00:00 CST-0500",
+"June 14 2020 21:00:00 CST-0500",
+"June 21 2020 21:00:00 CST-0500",
+"June 28 2020 21:00:00 CST-0500",
+"July 5 2020 21:00:00 CST-0500",
+"July 12 2020 21:00:00 CST-0500",
+"July 19 2020 21:00:00 CST-0500",
+"July 26 2020 21:00:00 CST-0500",
+"August 2 2020 21:00:00 CST-0500",
+"August 9 2020 21:00:00 CST-0500",
+"August 16 2020 21:00:00 CST-0500",
+"August 23 2020 21:00:00 CST-0500",
+"August 30 2020 21:00:00 CST-0500",
+"September 6 2020 21:00:00 CST-0500",
+"September 13 2020 21:00:00 CST-0500",
+"September 20 2020 21:00:00 CST-0500",
+"September 27 2020 21:00:00 CST-0500",
+"October 4 2020 21:00:00 CST-0500",
+"October 11 2020 21:00:00 CST-0500",
+"October 18 2020 21:00:00 CST-0500",
+"October 25 2020 21:00:00 CST-0500",
+"November 1 2020 21:00:00 CST-0500",
+"November 8 2020 21:00:00 CST-0500",
+"November 15 2020 21:00:00 CST-0500",
+"November 22 2020 21:00:00 CST-0500",
+"November 29 2020 21:00:00 CST-0500",
+"December 6 2020 21:00:00 CST-0500",
+"December 13 2020 21:00:00 CST-0500",
+"December 20 2020 21:00:00 CST-0500",
+"December 27 2020 21:00:00 CST-0500",
 ];
-
 
 function getTimeRemaining(endtime) {
   var t = Date.parse(endtime) - Date.parse(new Date());
@@ -68,10 +119,7 @@ function initializeClock(id, endtime) {
 
     if (t.total <= 0) {
       clearInterval(timeinterval);
-      for each(date in dates) {
-        var deadline = ;
-      }
-      var deadline = ;
+      var deadline = new Date(Date.parse(new Date()) + 7 * 24 * 60 * 60 * 1000);
       initializeClock('clockdiv', deadline);
     }
   }
