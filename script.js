@@ -17,6 +17,11 @@ function getSeconds() {
  startTimer (diff);
 }
  
+while(curday == 0) {
+  if(date.gethours() == 9) {
+  reset timer;
+  }
+}
 function startTimer(secs) {
  secTime = parseInt(secs);
  ticker = setInterval("tick()",1000);
