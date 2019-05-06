@@ -87,7 +87,7 @@ var dates = [
 "December 27 2020 21:00:00 CST-0500",
 ];
 
-var dateAmount = 
+var datesAmount = dates.length
 
 function getTimeRemaining(endtime) {
   var t = Date.parse(endtime) - Date.parse(new Date());
@@ -121,19 +121,18 @@ function initializeClock(id, endtime) {
 
     if (t.total <= 0) {
       clearInterval(timeinterval);
-      var deadline = new Date(Date.parse(new Date()) + 7 * 24 * 60 * 60 * 1000);
-      initializeClock('clockdiv', deadline);
+      while (t.total <= 0) {
+    for (var i = 0; i < datesAmount; i++) {
+        console.log(datesAmount[i]);
+        
+    }
+  }
+}
     }
   }
 
   updateClock();
   var timeinterval = setInterval(updateClock, 1000);
-}
-
-function selectDate() {
-while (t.total <= 0) {
-
-  }
 }
 
 var deadline = "May 12 2019 21:00:00 CST-0500"
