@@ -121,7 +121,21 @@ function initializeClock(id, endtime) {
     hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
     minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
     secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
-
+    
+    if (t.total >= 0) {
+      var sessionSpan = false
+    }
+    else                      {
+          sessionSpan = false
+    }
+    
+    if (sessionSpan = true)   {
+          document.getElementById("rainbow").innerHTML = "The session's in progress!";
+    }
+    if (sessionSpan = false)  {
+          document.getElementById("rainbow").innerHTML = "";
+    }
+    
 if (t.total <=0)  {
         clearInterval(timeinterval);
         i++;
