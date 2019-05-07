@@ -144,6 +144,8 @@ updateClock();
 
 initializeClock('clockdiv', deadline);
 
-
+function textInput () {
+document.getElementById("nameInput").value
+}
 
 //"May 13 2019 18:12:00 CST-0500",
