@@ -1,5 +1,4 @@
 var dates = [
-"May 6 2019 21:00:00 CST-0500",
 "5/12/19 21:00:00 CST-0500",
 "5/19/19 21:00:00 CST-0500",
 "5/26/19 21:00:00 CST-0500",
@@ -89,6 +88,8 @@ var dates = [
 ];
 
 var datesAmount = dates.length
+var i = 0;
+var deadline = (dates[i]);
 
 function getTimeRemaining(endtime) {
   var t = Date.parse(endtime) - Date.parse(new Date());
@@ -121,8 +122,8 @@ function initializeClock(id, endtime) {
     minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
     secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
 if (t.total <=0)  {
-        i++;
         clearInterval(timeinterval);
+        i++;
         var deadline = (dates[i]);
         initializeClock('clockdiv', deadline);
 }
@@ -133,8 +134,6 @@ if (t.total <=0)  {
   var timeinterval = setInterval(updateClock, 1000);
 
 }
-var i = 0;
-var deadline = "May 6 2019 19:3:00 CST-0500"
 initializeClock('clockdiv', deadline);
 
-//"May 12 2019 21:00:00 CST-0500"
+//"May 6 2019 18:12:00 CST-0500";
