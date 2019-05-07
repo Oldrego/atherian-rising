@@ -1,4 +1,5 @@
 var dates = [
+"May 6 2019 21:00:00 CST-0500",
 "5/12/19 21:00:00 CST-0500",
 "5/19/19 21:00:00 CST-0500",
 "5/26/19 21:00:00 CST-0500",
@@ -105,6 +106,7 @@ function getTimeRemaining(endtime) {
 }
 
 function initializeClock(id, endtime) {
+  clearInterval(timeinterval);
   var clock = document.getElementById(id);
   var daysSpan = clock.querySelector('.days');
   var hoursSpan = clock.querySelector('.hours');
@@ -119,14 +121,10 @@ function initializeClock(id, endtime) {
     minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
     secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
 if (t.total <=0)  {
-    do {
-      for (var i = 0; i < datesAmount; i++) {
+        i++;
         clearInterval(timeinterval);
-        var dateRecovered = (dates[i]);
-        var deadline = dateRecovered;
-      initializeClock('clockdiv', deadline);
-      }
-    }  while (t.total <= 0);
+        var deadline = (dates[i]);
+        initializeClock('clockdiv', deadline);
 }
   
 }
@@ -135,8 +133,8 @@ if (t.total <=0)  {
   var timeinterval = setInterval(updateClock, 1000);
 
 }
-
-var deadline = "May 6 2019 18:52:00 CST-0500"
+var i = 0;
+var deadline = "May 6 2019 19:3:00 CST-0500"
 initializeClock('clockdiv', deadline);
 
 //"May 12 2019 21:00:00 CST-0500"
