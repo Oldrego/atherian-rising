@@ -1,4 +1,5 @@
 var dates = [
+"May 13 2019 18:12:00 CST-0500",
 "5/12/19 21:00:00 CST-0500",
 "5/19/19 21:00:00 CST-0500",
 "5/26/19 21:00:00 CST-0500",
@@ -121,34 +122,38 @@ function initializeClock(id, endtime) {
     hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
     minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
     secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
-    
-    if (t.total >= 0) {
-      var sessionSpan = false
-    }
-    else                      {
-          sessionSpan = false
-    }
-    
-    if (sessionSpan = true)   {
-          document.getElementById("rainbow").innerHTML = "The session's in progress!";
-    }
-    if (sessionSpan = false)  {
-          document.getElementById("rainbow").innerHTML = "";
-    }
-    
+    checkSession();
 if (t.total <=0)  {
         clearInterval(timeinterval);
         i++;
         var deadline = (dates[i]);
         initializeClock('clockdiv', deadline);
 }
-  
+    
 }
 
   updateClock();
   var timeinterval = setInterval(updateClock, 1000);
 
 }
+
 initializeClock('clockdiv', deadline);
 
-//"May 6 2019 18:12:00 CST-0500";
+    function checkSession() {
+  if (t.total >= 590400000) {
+      var sessionSpan = true
+    }
+    else                      {
+          sessionSpan = false
+    }
+    
+    if (sessionSpan == true)   {
+      document.getElementById("top").innerHTML = "Now we wait for our heroes...";
+          document.getElementById("rainbow").innerHTML = "The session's in progress!";
+    }
+    if (sessionSpan == false)  {
+      document.getElementById("top").innerHTML = "Time until next session...";
+          document.getElementById("rainbow").innerHTML = "";
+    }
+}
+//"May 13 2019 18:12:00 CST-0500";
