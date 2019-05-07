@@ -122,7 +122,7 @@ function initializeClock(id, endtime) {
     hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
     minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
     secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
-    checkSession();
+    
 if (t.total <=0)  {
         clearInterval(timeinterval);
         i++;
@@ -132,28 +132,11 @@ if (t.total <=0)  {
     
 }
 
-  updateClock();
+updateClock();
   var timeinterval = setInterval(updateClock, 1000);
-
 }
 
 initializeClock('clockdiv', deadline);
 
-    function checkSession() {
-  if (t.total >= 590400000) {
-      var sessionSpan = true
-    }
-    else                      {
-          sessionSpan = false
-    }
-    
-    if (sessionSpan == true)   {
-      document.getElementById("top").innerHTML = "Now we wait for our heroes...";
-          document.getElementById("rainbow").innerHTML = "The session's in progress!";
-    }
-    if (sessionSpan == false)  {
-      document.getElementById("top").innerHTML = "Time until next session...";
-          document.getElementById("rainbow").innerHTML = "";
-    }
-}
+
 //"May 13 2019 18:12:00 CST-0500";
