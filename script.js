@@ -132,6 +132,7 @@ else                      {
 if (t.total <=0)  {
         clearInterval(timeinterval);
         i++;
+        var nameList = [];
         var deadline = (dates[i]);
         initializeClock('clockdiv', deadline);
 }
