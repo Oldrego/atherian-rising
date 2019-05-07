@@ -1,5 +1,5 @@
 var dates = [
-"5/12/19 21:00:00 CST-0500",
+"5/13/19 19:00:00 CST-0500",
 "5/19/19 21:00:00 CST-0500",
 "5/26/19 21:00:00 CST-0500",
 "6/2/19 21:00:00 CST-0500",
@@ -116,16 +116,22 @@ function initializeClock(id, endtime) {
 
   function updateClock() {
     var t = getTimeRemaining(endtime);
+    
+   if (t.hours >= 164) {
+  var sessionSpan = true;}
+   else                {
+  sessionSpan = false;   }
+  
 
     daysSpan.innerHTML = t.days;
     hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
     minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
     secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
-if (t.seconds >= 164) {
-var session = "The session's happening right now!";
+if (sessionSpan = true) {
+sessionSpan.innerHTML = (t.total);
 }
-else {
-session = "";
+if (sessionSpan = false) {
+sessionSpan.innerHTML = (t.total);
 }
 if (t.total <=0)  {
         clearInterval(timeinterval);
