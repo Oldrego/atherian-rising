@@ -121,6 +121,12 @@ function initializeClock(id, endtime) {
     hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
     minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
     secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+if (t.seconds >= 164) {
+var session = "The session's happening right now!";
+}
+else {
+session = "";
+}
 if (t.total <=0)  {
         clearInterval(timeinterval);
         i++;
