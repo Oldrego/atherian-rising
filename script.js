@@ -1,5 +1,4 @@
 var dates = [
-"May 13 2019 18:12:00 CST-0500",
 "5/12/19 21:00:00 CST-0500",
 "5/19/19 21:00:00 CST-0500",
 "5/26/19 21:00:00 CST-0500",
@@ -123,6 +122,13 @@ function initializeClock(id, endtime) {
     minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
     secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
     
+if (t.total >= 590400000) {
+          document.getElementById("rainbow").innerHTML = "The session's in progress!";
+    }
+else                      {
+          document.getElementById("rainbow").innerHTML = " ";
+    }
+    
 if (t.total <=0)  {
         clearInterval(timeinterval);
         i++;
@@ -139,4 +145,4 @@ updateClock();
 initializeClock('clockdiv', deadline);
 
 
-//"May 13 2019 18:12:00 CST-0500";
+//"May 13 2019 18:12:00 CST-0500",
